@@ -16,3 +16,4 @@ releasenotes/build/
 .coverage*
 !.coveragerc
 cover/
+*.mo
