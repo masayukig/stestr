@@ -10,6 +10,7 @@ __pycache__
 .*.swp
 .tox/*
 *egg*
+*.mo
 doc/build/
 releasenotes/build/
 .stestr.sqlite
