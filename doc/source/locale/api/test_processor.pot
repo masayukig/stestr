@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2019, Matthew Treinish
+# This file is distributed under the same license as the stestr package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: stestr trunk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-07 16:49+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../api/test_processor.rst:4
+msgid "Test Processor Module"
+msgstr ""
+
+#: ../api/test_processor.rst:6
+msgid "This module contains the definition of the ``TestProcessorFixture`` fixture class. This fixture is used for handling the actual spawning of worker processes for running tests, or listing tests. It is constructed as a `fixture`_ to handle the lifecycle of the test id list files which are used to pass test ids to the workers processes running the tests."
+msgstr ""
+
+#: ../api/test_processor.rst:14
+msgid "In the normal workflow a ``TestProcessorFixture`` get's returned by the :ref:`api_config_file`'s ``get_run_command()`` function. The config file parses the config file and the cli options to create a ``TestProcessorFixture`` with the correct options. This Fixture then gets returned to the CLI commands to enable them to run the commands."
+msgstr ""
+
+#: ../api/test_processor.rst:20
+msgid "The ``TestProcessorFixture`` class is written to be fairly generic in the command it's executing. This is an artifact of being forked from testrepository where the test command is defined in the configuration file. In stestr the command is hard coded ``stestr.config_file`` module so this extra flexibility isn't really needed."
+msgstr ""
+
+#: ../api/test_processor.rst:27
+msgid "API Reference"
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:1
+msgid "Write a temporary file to disk with test ids in it."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:3
+msgid "The TestProcessorFixture is used to handle the lifecycle of running the subunit.run commands. A fixture is used for this class to handle the temporary list files creation."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:7
+msgid "The test_ids to use. May be None indicating that no ids are known and they should be discovered by listing or configuration if they must be known to run tests. Test ids are needed to run tests when filtering or partitioning is needed: if the run concurrency is > 1 partitioning is needed, and filtering is needed if the user has passed in filters."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:13
+msgid "string to be used for the command that will be filled out with the IDFILE when it is created."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:15
+msgid "Option to substitute into LISTOPT to cause test listing to take place."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:17
+msgid "Option to substitute into cmd when supplying any test ids."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:18
+msgid "The repository to query for test times, if needed."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:19
+msgid "If not True, prohibit parallel use : used to implement --parallel run recursively."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:21
+msgid "The file listing path to use. If None, a unique path is created."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:23
+msgid "An optional list of test filters to apply. Each filter should be a string suitable for passing to re.compile. Filters are applied using search() rather than match(), so if anchoring is needed it should be included in the regex. The test ids used for executing are the union of all the individual filters: to take the intersection instead, craft a single regex that matches all your criteria. Filters are automatically applied by run_tests(), or can be applied by calling filter_tests(test_ids)."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:32
+msgid "If supplied, should be a function that accepts a test id and returns a group id. A group id is an arbitrary value used as a dictionary key in the scheduler. All test ids with the same group id are scheduled onto the same backend test process."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:36
+msgid "Run tests serially"
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:37
+msgid "Optional path of a manual worker grouping file to use for the run"
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:39
+msgid "How many processes to use. The default (0) autodetects your CPU count and uses that."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:41
+msgid "Path to a blacklist file, this file contains a separate regex exclude on each newline."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:43
+msgid "Path to a whitelist file, this file contains a separate regex on each newline."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture:45
+msgid "Randomize the test order after they are partitioned into separate workers"
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.list_tests:1
+msgid "List the tests returned by list_cmd."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.list_tests:0
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.run_tests:0
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.setUp:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.list_tests:3
+msgid "A list of test ids."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.run_tests:1
+msgid "Run the tests defined by the command"
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.run_tests:3
+msgid "A list of spawned processes."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.setUp:1
+msgid "Prepare the Fixture for use."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.setUp:3
+msgid "This should not be overridden. Concrete fixtures should implement _setUp. Overriding of setUp is still supported, just not recommended."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.setUp:6
+msgid "After setUp has completed, the fixture will have one or more attributes which can be used (these depend totally on the concrete subclass)."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.setUp:0
+msgid "raises"
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.setUp:9
+msgid "MultipleExceptions if _setUp fails. The last exception captured within the MultipleExceptions will be a SetupError exception."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.setUp:12
+msgid "None."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.setUp:0
+msgid "changed in 1.3"
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.setUp:14
+msgid "The recommendation to override setUp has been reversed - before 1.3, setUp() should be overridden, now it should not be."
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.setUp:0
+msgid "changed in 1.3.1"
+msgstr ""
+
+#: ../../../stestr/test_processor.py:docstring of stestr.test_processor.TestProcessorFixture.setUp:17
+msgid "BaseException is now caught, and only subclasses of Exception are wrapped in MultipleExceptions."
+msgstr ""
+

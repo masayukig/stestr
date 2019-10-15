@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2019, Matthew Treinish
+# This file is distributed under the same license as the stestr package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: stestr trunk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-07 16:59+0900\n"
+"PO-Revision-Date: 2019-08-07 12:42+0900\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: Zanata 4.6.2\n"
+
+#: ../api.rst:4
+msgid "Internal API Reference"
+msgstr ""
+
+#: ../api.rst:5
+msgid ""
+"This document serves as a reference for the python API used in stestr. It "
+"should serve as a guide for both internal and external use of stestr "
+"components via python. The majority of the contents here are built from "
+"internal docstrings in the actual code."
+msgstr ""
+
+#: ../api.rst:11
+msgid "Repository"
+msgstr ""
+
+#: ../api.rst:22
+msgid "Commands"
+msgstr ""
+
+#: ../api.rst:24
+msgid ""
+"These modules are used for the operation of all the various subcommands in "
+"stestr. As of the 1.0.0 release each of these commands should be considered "
+"a stable interface that can be relied on externally."
+msgstr ""
+
+#: ../api.rst:28
+msgid ""
+"Each command module conforms to a basic format that is based on the `cliff`_ "
+"framework. The basic structure for these modules is the following three "
+"functions in each class::"
+msgstr ""
+
+#: ../api.rst:52
+msgid ""
+"The command class will not work if all 3 of these function are not defined. "
+"However, to make the commands externally consumable each module also "
+"contains another public function which performs the real work for the "
+"command. Each one of these functions has a defined stable Python API "
+"signature with args and kwargs so that people can easily call the functions "
+"from other python programs. This function is what can be expected to be used "
+"outside of stestr as the stable interface. All the stable functions can be "
+"imported the command module directly::"
+msgstr ""
+
+#: ../api.rst:80
+msgid "Internal APIs"
+msgstr ""
+
+#: ../api.rst:82
+msgid ""
+"The modules in this list do not necessarily have any external api contract, "
+"they are intended for internal use inside of stestr. If anything in these "
+"provides a stable contract and is intended for usage outside of stestr it "
+"will be noted in the api doc."
+msgstr ""
